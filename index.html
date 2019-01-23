@@ -75,6 +75,8 @@
                 <label for="state">State</label>
                 <input name="state" type="text" id="stateBox" required list="stateList">
                 <datalist id="stateList">
+
+                    <!-- the value for the option attribute will be displayed in a scroll menu -->
                     <option value="AL"></option>
                     <option value="AK"></option>
                     <option value="AZ"></option>
@@ -127,6 +129,7 @@
                     <option value="WY"></option>
                 </datalist>
 
+
                 <label for="zip">ZIP/Postal Code</label>
                 <input name="zip" type="text" id="zipBox" pattern="^\d{5}(-\d{4})?$">
 
@@ -138,11 +141,14 @@
 
             </fieldset>
 
+
             <fieldset id="creditCard">
                 <legend>Credit Card (Required)</legend>
 
 
                 <fieldset>
+
+                    <!-- this field set will display a row of types of credit cards that are clickable to know what type of credit card the user is using. it is also accompanied by an image of the type of crdit card -->
                     <label for="" class="cardLabel">
                         <input name="cCard" type="radio" value="amex" required>
                         <img src="sb_amex.png" alt="">
@@ -161,9 +167,12 @@
                     </label>
                 </fieldset>
 
+                <!-- this label is for the credit card number its sos the user can input thier credit card number the input has the patter that is needed to valdiate that it is a credit card -->
                 <label for="cardBox">Credit Card Number</label>
                 <input type="text" id="cardBox" name="cardNumber" pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$"
                     required>
+
+                <!-- this section is used for the expiration date on the credit card using an option attribte for the month and year both being required -->
                 <label for="monthList">Expiration Date</label>
                 <select name="cardMonth" id="monthList" required>
                     <option value="Month"></option>
@@ -180,6 +189,8 @@
                     <option value="November (11)">November (11)</option>
                     <option value="December (12)">December (12)</option>
                 </select>
+
+
                 <select name="cardMonth" id="monthList" required>
                     <option value="--Year--"></option>
                     <option value="2017">2017</option>
@@ -189,10 +200,12 @@
                     <option value="2021">2021</option>
                 </select>
 
+                <!-- this section is for the CSC on the card i added the pattern that is required to validate the CSC number and a placeholder with the text "nnn" the max length is 3-->
                 <label for="cscBox">CSC</label>
                 <input type="text" id="cscBox" required pattern=" ^\d{3}$" maxlength="3" placeholder="nnn">
             </fieldset>
 
+            <!-- this is the code for the next button -->
             <button type="submit">
                 <img src="sb_button.png" alt="next">
             </button>

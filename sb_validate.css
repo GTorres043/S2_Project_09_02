@@ -13,15 +13,19 @@
 
 
 /* Validation Styles */
+
+/* this will happen to any input attribute that is focused and is not a type of attribute changing the background color */
 input:focus:not([type='radio']) {
     background-color: rgb(255, 218, 165);
 }
 
+/* when the input is being focused on and the information is valid it will change color and an image with a green check mark will apear on the right */
 input:focus:valid:not([type='radio']) {
     background: rgb(215, 255, 215) url(sb_valid.png) right no-repeat;
 
 }
 
+/* when an input is invalid and is focused on the color will change and an image with a red "x" will apear on right of the slot */
 input:focus:invalid:not([type='radio']) {
     background: rgb(255, 245, 215) url(sb_invalid.png) right no-repeat;
 }
