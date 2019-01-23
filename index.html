@@ -29,6 +29,7 @@
     <header>
         <img src="sb_logo.png" alt="The Spice Bowl" />
 
+        <!-- this line of code will make a username and password form on the top right corner of the page -->
         <form action=" http://www.example.com/sb/login " id="login" method="POST">
             <input type="text" name="username" id="userBox" placeholder="username">
             <input type="text" name="password" id="pwdBox" placeholder="password">
@@ -45,10 +46,13 @@
         </nav>
     </header>
 
+    <!-- the start of the payment form  -->
     <section>
         <h1>Payment Form</h1>
 
         <form action=" http://www.example.com/sb/payment" method="POST" id="payment">
+
+            <!-- this fieldset will be asking for billing information like first name, last, and adress  -->
             <fieldset id="billing">
                 <legend>Billing Information(Required)</legend>
 
@@ -67,6 +71,7 @@
                 <label for="city">City</label>
                 <input name="city" type="text" id="cityBox" required>
 
+                <!-- this label will have a clickable datalist that lets you select the state you are from using option attributes and values -->
                 <label for="state">State</label>
                 <input name="state" type="text" id="stateBox" required list="stateList">
                 <datalist id="stateList">
@@ -129,12 +134,14 @@
                 <input name="country" type="text" id="countryBox" value="United States" required>
 
                 <label for="phone">Phone</label>
-                <input name="phone" type="tel" id="phoneBox" required pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$ ">
+                <input name="phone" type="tel" id="phoneBox" required pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$">
 
             </fieldset>
 
             <fieldset id="creditCard">
                 <legend>Credit Card (Required)</legend>
+
+
                 <fieldset>
                     <label for="" class="cardLabel">
                         <input name="cCard" type="radio" value="amex" required>
@@ -153,27 +160,42 @@
                         <img src="sb_visa.png" alt="">
                     </label>
                 </fieldset>
-            </fieldset>
-            <label for="cardBox">Credit Card Number</label>
-            <input type="text" id="cardBox" name="cardNumber" pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$"
-                required>
-            <label for="monthList">Expiration Date</label>
-            <select name="cardMonth" id="monthList" required>
-                <option value="Month"></option>
-                <option value="January (1)">January (1)</option>
-                <option value="Febuary (2)">Febuary (2)</option>
-                <option value="March (3)">March (3)</option>
-                <option value="April (4)">April (4)</option>
-                <option value="May (5)">May (5)</option>
-                <option value="June (6)">June (6)</option>
-                <option value="July (7)">July (7)</option>
-                <option value="August (8)">August (8)</option>
-                <option value="September (9)">September (9)</option>
-                <option value="October (10)">October (10)</option>
-                <option value="November (11)">November (11)</option>
-                <option value="December (12)">December (12)</option>
-            </select>
 
+                <label for="cardBox">Credit Card Number</label>
+                <input type="text" id="cardBox" name="cardNumber" pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$"
+                    required>
+                <label for="monthList">Expiration Date</label>
+                <select name="cardMonth" id="monthList" required>
+                    <option value="Month"></option>
+                    <option value="January (1)">January (1)</option>
+                    <option value="Febuary (2)">Febuary (2)</option>
+                    <option value="March (3)">March (3)</option>
+                    <option value="April (4)">April (4)</option>
+                    <option value="May (5)">May (5)</option>
+                    <option value="June (6)">June (6)</option>
+                    <option value="July (7)">July (7)</option>
+                    <option value="August (8)">August (8)</option>
+                    <option value="September (9)">September (9)</option>
+                    <option value="October (10)">October (10)</option>
+                    <option value="November (11)">November (11)</option>
+                    <option value="December (12)">December (12)</option>
+                </select>
+                <select name="cardMonth" id="monthList" required>
+                    <option value="--Year--"></option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                </select>
+
+                <label for="cscBox">CSC</label>
+                <input type="text" id="cscBox" required pattern=" ^\d{3}$" maxlength="3" placeholder="nnn">
+            </fieldset>
+
+            <button type="submit">
+                <img src="sb_button.png" alt="next">
+            </button>
         </form>
         <aside>
             <h1>Menu Ideas</h1>
